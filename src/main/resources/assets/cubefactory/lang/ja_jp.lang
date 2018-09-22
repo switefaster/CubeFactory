@@ -1,0 +1,13 @@
+item.cubefactory.antimatter.name=反物質
+item.cubefactory.constructor.name=コンストラクター
+item.cubefactory.container_filler.name=容器充填器
+tile.cubefactory.antimatter_reactor.name=反物質反応装置
+tile.cubefactory.cable.name=ケーブル
+itemGroup.cubefactory=キューブ ファクトリー
+container.cubefactory.antimatter_reactor=反物質反応装置
+tooltip.common.storage=エネルギー
+tooltip.common.mass=質量
+cubefactory.advancements.antimatter_explosion.title=！ンーカド
+cubefactory.advancements.antimatter_explosion.desc=反物質☆ゲットだぜ！
+cubefactory.potion.ionizing_radiation=電離放射線
+cubefactory.emit_failed=発射に失敗しました。 発射機の設定が無効かもしれません。 設定たしかめ、又は変更した後、もう一度試してください。

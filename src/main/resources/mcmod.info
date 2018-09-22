@@ -1,0 +1,21 @@
+[
+  {
+    "modid": "cubefactory",
+    "name": "CubeFactory",
+    "description": "An industrial mod providing some awesome technologies developed by DHW PCS[Org]",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "http://switefaster.dwcdn.tk/cubefactory/",
+    "updateUrl": "http://switefaster.dwcdn.tk/cubefactory/",
+    "authorList": [
+      "switefaster"
+    ],
+    "credits": "DHW PCS: [CraftKevin, Doodle, StapxSteve, Zheng_Fourth, InitAuthor97, L_Ac, LFCode]",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": [
+      "IndustrialCraft2",
+      "RedstoneFlux"
+    ]
+  }
+]

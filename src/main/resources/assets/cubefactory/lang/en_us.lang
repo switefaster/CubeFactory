@@ -1,0 +1,15 @@
+item.cubefactory.antimatter.name=Antimatter
+item.cubefactory.constructor.name=Constructor
+item.cubefactory.container_filler.name=Container Filler
+tile.cubefactory.antimatter_reactor.name=Antimatter Reactor
+tile.cubefactory.cable.name=Cable
+itemGroup.cubefactory=Cube Factory
+container.cubefactory.antimatter_reactor=Antimatter Reactor
+tooltip.common.storage=Storage
+tooltip.common.mass=Mass
+tooltip.common.matter=Matter
+tooltip.common.antimatter=Antimatter
+cubefactory.advancements.antimatter_explosion.title=!mooB
+cubefactory.advancements.antimatter_explosion.desc=Get some powerful antimatter
+cubefactory.potion.ionizing_radiation=Ionizing Radiation
+cubefactory.emit_failed=Failed emitting out. Maybe there are no available emitter set. Try to update the emit settings and retry!

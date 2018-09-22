@@ -1,0 +1,13 @@
+item.cubefactory.antimatter.name=反物质
+item.cubefactory.constructor.name=构筑器
+item.cubefactory.container_filler.name=容器填充器
+tile.cubefactory.antimatter_reactor.name=反物质反应堆
+tile.cubefactory.cable.name=缆线
+itemGroup.cubefactory=方块工厂
+container.cubefactory.antimatter_reactor=反物质反应堆
+tooltip.common.storage=容量
+tooltip.common.mass=质量
+cubefactory.advancements.antimatter_explosion.title=!轰
+cubefactory.advancements.antimatter_explosion.desc=得到一些强力的反物质
+cubefactory.potion.ionizing_radiation=电离辐射
+cubefactory.emit_failed=发射失败!可能是由于无可用或合法的发射器设置导致,请更新您的发射器设置再重试!

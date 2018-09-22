@@ -1,0 +1,48 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "orientable"
+  },
+  "variants": {
+    "inventory": [
+      {
+        "textures": {
+          "front": "cubefactory:blocks/antimatter_reactor",
+          "side": "cubefactory:blocks/antimatter_reactor_side",
+          "top": "cubefactory:blocks/antimatter_reactor_side"
+        }
+      }
+    ],
+    "reacting": {
+      "true": {
+        "textures": {
+          "front": "cubefactory:blocks/antimatter_reactor_reacting",
+          "side": "cubefactory:blocks/antimatter_reactor_side_reacting",
+          "top": "cubefactory:blocks/antimatter_reactor_side_reacting"
+        }
+      },
+      "false": {
+        "textures": {
+          "front": "cubefactory:blocks/antimatter_reactor",
+          "side": "cubefactory:blocks/antimatter_reactor_side",
+          "top": "cubefactory:blocks/antimatter_reactor_side"
+        }
+      }
+    },
+    "facing": {
+      "east": {
+        "y": 90,
+        "uvlock": true
+      },
+      "north": {},
+      "south": {
+        "y": 180,
+        "uvlock": true
+      },
+      "west": {
+        "y": 270,
+        "uvlock": true
+      }
+    }
+  }
+}

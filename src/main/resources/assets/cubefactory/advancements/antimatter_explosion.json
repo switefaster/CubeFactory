@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "cubefactory:antimatter",
+      "data": 0
+    },
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "hidden": false,
+    "show_toast": true,
+    "description": {
+      "translate": "cubefactory.advancements.antimatter_explosion.desc"
+    },
+    "title": {
+      "translate": "cubefactory.advancements.antimatter_explosion.title"
+    }
+  },
+  "criteria": {
+    "thrown": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "cubefactory:antimatter"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 20
+  }
+}
