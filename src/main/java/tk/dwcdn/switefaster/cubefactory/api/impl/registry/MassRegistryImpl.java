@@ -1,7 +1,7 @@
-package tk.dwcdn.switefaster.cubefactory.api.impl;
+package tk.dwcdn.switefaster.cubefactory.api.impl.registry;
 
 import net.minecraft.item.Item;
-import tk.dwcdn.switefaster.cubefactory.api.AbstractCubeFactoryMassRegistry;
+import tk.dwcdn.switefaster.cubefactory.api.registry.AbstractCubeFactoryMassRegistry;
 
 import java.util.HashMap;
 import java.util.Map;

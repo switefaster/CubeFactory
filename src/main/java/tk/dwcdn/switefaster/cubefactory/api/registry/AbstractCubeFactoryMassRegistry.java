@@ -1,11 +1,10 @@
-package tk.dwcdn.switefaster.cubefactory.api;
+package tk.dwcdn.switefaster.cubefactory.api.registry;
 
 import net.minecraft.item.Item;
-import tk.dwcdn.switefaster.cubefactory.api.impl.MassRegistryImpl;
+import tk.dwcdn.switefaster.cubefactory.api.impl.registry.MassRegistryImpl;
 
 /**
  * @author switefaster
- * <p>
  * The mass capability registry of CubeFactory
  * Note that {@link MassRegistryImpl} is the default implementation
  * To register the mass with default implementation, use the INSTANCE field of {@link AbstractCubeFactoryMassRegistry}
@@ -20,7 +19,7 @@ public abstract class AbstractCubeFactoryMassRegistry {
 
     static {
         try {
-            Class<?> implClass = Class.forName("tk.dwcdn.switefaster.cubefactory.api.impl.MassRegistryImpl");
+            Class<?> implClass = Class.forName("tk.dwcdn.switefaster.cubefactory.api.impl.registry.MassRegistryImpl");
             INSTANCE = (AbstractCubeFactoryMassRegistry) implClass.getField("INSTANCE").get(null);
         } catch (Exception e) {
             throw new RuntimeException("Cannot find implementation", e);

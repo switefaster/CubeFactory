@@ -4,17 +4,22 @@ import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.CapabilityInject;
 import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import tk.dwcdn.switefaster.cubefactory.api.capability.CapabilityPortableStorage;
+import tk.dwcdn.switefaster.cubefactory.api.capability.IPortableStorage;
+import tk.dwcdn.switefaster.cubefactory.api.impl.capability.ImplPortableStorage;
 
 /**
  * @author switefaster
  */
 public class CapabilityLoader {
 
-    @CapabilityInject(IMass.class)
-    public static Capability<IMass> massCapability;
+    @SuppressWarnings("unused")
+    @CapabilityInject(IPortableStorage.class)
+    public static Capability<IPortableStorage> portableStorage;
 
+    @SuppressWarnings("unused")
     public CapabilityLoader(FMLPreInitializationEvent event) {
-        CapabilityManager.INSTANCE.register(IMass.class, new CapabilityMass.Storage(), CapabilityMass.Implementation::new);
+        CapabilityManager.INSTANCE.register(IPortableStorage.class, new CapabilityPortableStorage.Storage(), ImplPortableStorage::new);
     }
 
 }
