@@ -8,7 +8,6 @@ import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.world.World;
 import tk.dwcdn.switefaster.cubefactory.CubeFactory;
 import tk.dwcdn.switefaster.cubefactory.creativetab.CreativeTabsLoader;
-import tk.dwcdn.switefaster.cubefactory.tileentity.TileEntityAcceleratorCore;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -27,7 +26,7 @@ public class BlockAcceleratorCore extends BlockContainer {
     @Nullable
     @Override
     public TileEntity createNewTileEntity(@Nonnull World worldIn, int meta) {
-        return new TileEntityAcceleratorCore();
+        return null;
     }
 
     @SuppressWarnings("deprecation")

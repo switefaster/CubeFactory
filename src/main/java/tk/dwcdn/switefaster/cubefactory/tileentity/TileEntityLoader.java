@@ -12,8 +12,6 @@ public class TileEntityLoader {
 
     public TileEntityLoader(FMLPreInitializationEvent event) {
         registerTileEntity(TileEntityAntimatterReactor.class, "antimatter_reactor");
-        registerTileEntity(TileEntityAcceleratorCore.class, "accelerator_core");
-        registerTileEntity(TileEntityAcceleratorEmitter.class, "accelerator_emitter");
     }
 
     private static void registerTileEntity(Class<? extends TileEntity> tileEntityClass, String id) {

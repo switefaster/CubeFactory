@@ -7,7 +7,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import tk.dwcdn.switefaster.cubefactory.api.AbstractCubeFactoryMassRegistry;
+import tk.dwcdn.switefaster.cubefactory.api.registry.AbstractCubeFactoryMassRegistry;
 
 /**
  * @author switefaster

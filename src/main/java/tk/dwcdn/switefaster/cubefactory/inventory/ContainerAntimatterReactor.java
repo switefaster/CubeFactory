@@ -12,8 +12,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
-import tk.dwcdn.switefaster.cubefactory.capability.CapabilityLoader;
-import tk.dwcdn.switefaster.cubefactory.capability.IMass;
 import tk.dwcdn.switefaster.cubefactory.item.ItemLoader;
 import tk.dwcdn.switefaster.cubefactory.tileentity.TileEntityAntimatterReactor;
 
@@ -26,10 +24,10 @@ public class ContainerAntimatterReactor extends Container {
 
     private final TileEntityAntimatterReactor tileEntity;
 
-    private int antimatterMass = 0;
     private int matterMass = 0;
-    private int animationTick = 0;
-    private int powerStorage = 0;
+    private int antimatterMass = 0;
+    private int energyStoage = 0;
+    private int animationTick = -1;
 
     ContainerAntimatterReactor(EntityPlayer player, TileEntity tileEntity) {
         super();
@@ -48,8 +46,7 @@ public class ContainerAntimatterReactor extends Container {
         {
             @Override
             public boolean isItemValid(@Nonnull ItemStack stack) {
-                IMass mass = stack.getCapability(CapabilityLoader.massCapability, null);
-                return mass != null && mass.getMass() > -1 && stack.getItem() != ItemLoader.ITEM_ANTIMATTER;
+                return true;
             }
         });
 
@@ -108,61 +105,59 @@ public class ContainerAntimatterReactor extends Container {
         return playerIn.getDistanceSq(this.tileEntity.getPos()) <= 64;
     }
 
+    @SideOnly(Side.CLIENT)
     @Override
     public void detectAndSendChanges() {
         super.detectAndSendChanges();
 
-        this.animationTick = tileEntity.getAnimationTick();
-        this.antimatterMass = tileEntity.getAntimatterMass();
         this.matterMass = tileEntity.getMatterMass();
-        this.powerStorage = tileEntity.getEnergyStored(EnumFacing.NORTH);
+        this.antimatterMass = tileEntity.getAntimatterMass();
+        this.energyStoage = tileEntity.getEnergyStored(EnumFacing.UP);
+        this.animationTick = tileEntity.getAnimationTick();
 
-        for (IContainerListener listener : listeners) {
-            listener.sendWindowProperty(this, 0, this.animationTick);
-            listener.sendWindowProperty(this, 1, this.powerStorage);
-            listener.sendWindowProperty(this, 2, this.antimatterMass);
-            listener.sendWindowProperty(this, 3, this.matterMass);
+        for (IContainerListener i : this.listeners) {
+            i.sendWindowProperty(this, 0, this.matterMass);
+            i.sendWindowProperty(this, 1, this.antimatterMass);
+            i.sendWindowProperty(this, 2, this.energyStoage);
+            i.sendWindowProperty(this, 3, this.animationTick);
         }
     }
 
-    @SideOnly(Side.CLIENT)
     @Override
     public void updateProgressBar(int id, int data) {
         super.updateProgressBar(id, data);
 
         switch (id) {
             case 0:
-                this.animationTick = data;
+                this.matterMass = data;
                 break;
             case 1:
-                this.powerStorage = data;
-                break;
-            case 2:
                 this.antimatterMass = data;
                 break;
+            case 2:
+                this.energyStoage = data;
+                break;
             case 3:
-                this.matterMass = data;
+                this.animationTick = data;
                 break;
             default:
                 break;
         }
     }
 
-    public int getAnimationTick(){
-        return this.animationTick;
+    public int getMatterMass() {
+        return matterMass;
     }
 
-    public int getAntimatterMass()
-    {
-        return this.antimatterMass;
+    public int getAntimatterMass() {
+        return antimatterMass;
     }
 
-    public int getMatterMass()
-    {
-        return this.matterMass;
+    public int getEnergyStorage() {
+        return energyStoage;
     }
 
-    public int getPowerStorage() {
-        return this.powerStorage;
+    public int getAnimationTick() {
+        return animationTick;
     }
 }

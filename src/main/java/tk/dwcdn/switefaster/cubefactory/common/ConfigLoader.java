@@ -5,7 +5,7 @@ import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import org.apache.logging.log4j.Logger;
-import tk.dwcdn.switefaster.cubefactory.api.AbstractCubeFactoryMassRegistry;
+import tk.dwcdn.switefaster.cubefactory.api.registry.AbstractCubeFactoryMassRegistry;
 
 import java.util.Collection;
 
